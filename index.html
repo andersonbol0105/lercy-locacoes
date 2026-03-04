@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" /><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lercy Locações Catanduva</title>
@@ -430,11 +433,14 @@
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
-      .hamburger { display: flex; }
+      .hamburger { display: flex !important; }
       .servicos-grid { grid-template-columns: 1fr; }
+      .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
+      .galeria-grid { grid-template-columns: 1fr 1fr; }
+      .galeria-item.grande { grid-column: span 2; grid-row: span 1; aspect-ratio: 4/3; }
 
       nav {
-        display: none;
+        display: none !important;
         position: absolute;
         top: 70px; left: 0; right: 0;
         background: var(--azul-escuro);
@@ -442,9 +448,10 @@
         padding: 16px 24px 24px;
         gap: 4px;
         box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        z-index: 999;
       }
 
-      nav.open { display: flex; }
+      nav.open { display: flex !important; }
       nav a { width: 100%; text-align: center; padding: 12px; }
     }
 
@@ -726,11 +733,7 @@
       100% { transform: scale(1.5); opacity: 0; }
     }
 
-    @media (max-width: 768px) {
-      .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
-      .galeria-grid { grid-template-columns: 1fr 1fr; }
-      .galeria-item.grande { grid-column: span 2; grid-row: span 1; aspect-ratio: 4/3; }
-    }
+
     @media (max-width: 480px) {
       .galeria-grid { grid-template-columns: 1fr; }
       .galeria-item.grande { grid-column: span 1; }
@@ -769,8 +772,8 @@
     <div class="hero-bg"></div>
     <div class="hero-inner">
       <div class="hero-badge">📍 Catanduva e região</div>
-      <h1>Banheiros Químicos<br><span>para toda ocasião</span></h1>
-      <p>Aluguel de banheiros químicos para obras, eventos e festas.<br>Higiene, praticidade e atendimento rápido onde você precisar.</p>
+      <h1>Banheiros Químicos<br><span>& Limpeza de Fossas</span></h1>
+      <p>Aluguel de banheiros químicos para obras, eventos e festas.<br>Também realizamos limpeza de fossa. Higiene e atendimento rápido onde você precisar.</p>
       <div class="hero-btns">
         <a href="https://wa.me/5517999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn-whatsapp" target="_blank">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -949,7 +952,7 @@
         <div class="contato-card">
           <span>📧</span>
           <strong>E-mail</strong>
-          <a href="mailto:contato@lercylocacoes.com.br">contato@lercylocacoes.com.br</a>
+          <a href="/cdn-cgi/l/email-protection#d6b5b9b8a2b7a2b996bab3a4b5afbab9b5b7b5b9b3a5f8b5b9bbf8b4a4"><span class="__cf_email__" data-cfemail="b2d1dddcc6d3c6ddf2ded7c0d1cbdeddd1d3d1ddd7c19cd1dddf9cd0c0">[email&#160;protected]</span></a>
         </div>
       </div>
       <a href="https://wa.me/5517999999999" class="btn-whatsapp-grande" target="_blank">
@@ -980,14 +983,1963 @@
   <a href="https://wa.me/5517999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lercy Locações Catanduva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lercy Locações Catanduva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('nav').classList.toggle('open');
+    :root {
+      --azul:   #1B4F8A;
+      --azul-escuro: #0f2e52;
+      --verde:  #2E9E5B;
+      --verde-claro: #3dbd6e;
+      --branco: #FFFFFF;
+      --cinza-claro: #f4f7f4;
+      --texto:  #1a1a2e;
     }
-  </script>
 
-</body>
-</html>
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--azul-escuro);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--verde);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1.5px;
+      color: var(--branco);
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: var(--verde-claro);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--branco);
+    }
+
+    nav a.cta {
+      background: var(--verde);
+      color: var(--branco);
+      padding: 8px 18px;
+    }
+
+    nav a.cta:hover {
+      background: var(--verde-claro);
+    }
+
+    /* ── HAMBURGER (mobile) ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--branco);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── PLACEHOLDER CONTEÚDO ── */
+    .placeholder {
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      background: var(--cinza-claro);
+      color: #888;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .placeholder span { font-size: 48px; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--azul-escuro);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(46,158,91,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(27,79,138,0.4) 0%, transparent 50%),
+        linear-gradient(135deg, #0f2e52 0%, #1a3f6e 50%, #0f2e52 100%);
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(46,158,91,0.2);
+      border: 1px solid rgba(46,158,91,0.4);
+      color: var(--verde-claro);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      width: fit-content;
+      letter-spacing: 0.5px;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 1;
+      color: var(--branco);
+      letter-spacing: 2px;
+      animation: fadeDown 0.6s 0.1s ease both;
+    }
+
+    .hero h1 span { color: var(--verde-claro); }
+
+    .hero p {
+      font-size: clamp(15px, 2vw, 18px);
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      line-height: 1.7;
+      animation: fadeDown 0.6s 0.2s ease both;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeDown 0.6s 0.3s ease both;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.45);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--verde-claro);
+      background: rgba(46,158,91,0.1);
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      animation: fadeDown 0.6s 0.4s ease both;
+    }
+
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+
+    .stat strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--branco);
+      line-height: 1;
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SERVIÇOS ── */
+    .servicos {
+      background: var(--cinza-claro);
+      padding: 100px 24px;
+    }
+
+    .servicos-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: rgba(46,158,91,0.12);
+      border: 1px solid rgba(46,158,91,0.3);
+      color: var(--verde);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .section-header h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 5vw, 56px);
+      color: var(--azul-escuro);
+      letter-spacing: 1.5px;
+      line-height: 1;
+    }
+
+    .section-header h2 span { color: var(--verde); }
+
+    .section-header p {
+      color: #666;
+      font-size: 16px;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .servico-card {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 32px 28px;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .servico-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    .servico-card.destaque {
+      border: 2px solid var(--verde);
+      box-shadow: 0 4px 20px rgba(46,158,91,0.12);
+    }
+
+    .servico-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .servico-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--azul-escuro);
+      margin-bottom: 10px;
+    }
+
+    .servico-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .tag-popular {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--verde);
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .hamburger { display: flex !important; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
+      .galeria-grid { grid-template-columns: 1fr 1fr; }
+      .galeria-item.grande { grid-column: span 2; grid-row: span 1; aspect-ratio: 4/3; }
+
+      nav {
+        display: none !important;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: var(--azul-escuro);
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        gap: 4px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        z-index: 999;
+      }
+
+      nav.open { display: flex !important; }
+      nav a { width: 100%; text-align: center; padding: 12px; }
+    }
+
+    /* ── GALERIA ── */
+    .galeria { background: var(--branco); padding: 90px 24px; }
+    .galeria-inner { max-width: 1100px; margin: 0 auto; }
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .galeria-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+    .galeria-item.grande {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+    .galeria-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .galeria-item:hover img { transform: scale(1.06); }
+    .galeria-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,46,82,0.75) 0%, transparent 50%);
+      display: flex; align-items: flex-end; padding: 18px;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .galeria-item:hover .galeria-overlay { opacity: 1; }
+    .galeria-overlay span { color: var(--branco); font-weight: 800; font-size: 15px; }
+    .galeria-cta {
+      margin-top: 48px; display: flex; flex-direction: column;
+      align-items: center; gap: 18px; text-align: center;
+    }
+    .galeria-cta p { font-size: 18px; font-weight: 700; color: var(--azul-escuro); }
+
+    /* ── SOBRE ── */
+    .sobre {
+      background: var(--azul-escuro);
+      padding: 90px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .sobre::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(46,158,91,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .sobre-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .sobre-texto .section-badge {
+      background: rgba(46,158,91,0.2);
+      border: 1px solid rgba(46,158,91,0.3);
+      color: var(--verde-claro);
+    }
+    .sobre-texto h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(36px, 5vw, 54px);
+      color: var(--branco);
+      letter-spacing: 1.5px;
+      line-height: 1;
+      margin: 14px 0 20px;
+    }
+    .sobre-texto h2 span { color: var(--verde-claro); }
+    .sobre-texto p {
+      color: rgba(255,255,255,0.7);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .sobre-diferenciais {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .diferencial {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      transition: background 0.2s;
+    }
+    .diferencial:hover { background: rgba(255,255,255,0.08); }
+    .diferencial-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .diferencial-texto strong {
+      display: block;
+      color: var(--branco);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .diferencial-texto span {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* ── CONTATO ── */
+    .contato {
+      background: var(--cinza-claro);
+      padding: 90px 24px;
+    }
+    .contato-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contato-inner h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(36px, 5vw, 54px);
+      color: var(--azul-escuro);
+      letter-spacing: 1.5px;
+      margin: 14px 0 16px;
+    }
+    .contato-inner h2 span { color: var(--verde); }
+    .contato-inner p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .contato-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .contato-card {
+      background: var(--branco);
+      border-radius: 14px;
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 160px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .contato-card span:first-child { font-size: 28px; }
+    .contato-card strong {
+      font-size: 13px;
+      color: #999;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .contato-card a, .contato-card p {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      text-decoration: none;
+      margin: 0;
+    }
+    .btn-whatsapp-grande {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25D366;
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 18px 40px;
+      border-radius: 14px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+    }
+    .btn-whatsapp-grande:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.5);
+    }
+
+    /* ── RODAPÉ ── */
+    footer {
+      background: #060f1e;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-logo strong {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 22px;
+      color: var(--branco);
+      letter-spacing: 1.5px;
+    }
+    .footer-logo span {
+      font-size: 12px;
+      color: var(--verde-claro);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--verde-claro); }
+    .footer-copy {
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+    }
+
+    /* ── BOTÃO FLUTUANTE WHATSAPP ── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      background: #25D366;
+      color: var(--branco);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.6);
+    }
+    .whatsapp-float::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: rgba(37,211,102,0.4);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); opacity: 0.7; }
+      70%  { transform: scale(1.5); opacity: 0; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+
+    @media (max-width: 480px) {
+      .galeria-grid { grid-template-columns: 1fr; }
+      .galeria-item.grande { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">🚽</div>
+        <div class="logo-text">
+          <strong>Lercy Locações</strong>
+          <span>Catanduva • SP</span>
+        </div>
+      </a>
+
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato" class="cta">📞 Fale Conosco</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">📍 Catanduva e região</div>
+      <h1>Banheiros Químicos<br><span>& Limpeza de Fossas</span></h1>
+      <p>Aluguel de banheiros químicos para obras, eventos e festas.<br>Também realizamos limpeza de fossa. Higiene e atendimento rápido onde você precisar.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/5517999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn-whatsapp" target="_blank">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Solicitar Orçamento
+        </a>
+        <a href="#servicos" class="btn-outline">Ver Serviços</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>+500</strong><span>Eventos atendidos</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>24h</strong><span>Atendimento rápido</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Higienizados</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVIÇOS ── -->
+  <section class="servicos" id="servicos">
+    <div class="servicos-inner">
+      <div class="section-header">
+        <span class="section-badge">O que oferecemos</span>
+        <h2>Nossos <span>Serviços</span></h2>
+        <p>Soluções completas em locação de banheiros químicos para cada necessidade</p>
+      </div>
+      <div class="servicos-grid">
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🏗️</div>
+          <h3>Obras e Construção</h3>
+          <p>Banheiros químicos para canteiros de obra, garantindo conforto e higiene aos trabalhadores durante toda a construção.</p>
+        </div>
+
+        <div class="servico-card destaque">
+          <div class="servico-icon" style="background: rgba(46,158,91,0.15); color: var(--verde);">🎉</div>
+          <h3>Eventos e Festas</h3>
+          <p>Ideal para shows, festas, casamentos e eventos ao ar livre. Entrega, retirada e higienização inclusos no serviço.</p>
+          <span class="tag-popular">Mais solicitado</span>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🌾</div>
+          <h3>Área Rural e Agro</h3>
+          <p>Atendemos propriedades rurais, colheitas e atividades do agronegócio onde não há infraestrutura sanitária disponível.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(46,158,91,0.15); color: var(--verde);">♿</div>
+          <h3>Acessível (PCD)</h3>
+          <p>Banheiros adaptados para pessoas com deficiência, seguindo todas as normas de acessibilidade vigentes.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🚛</div>
+          <h3>Entrega e Retirada</h3>
+          <p>Fazemos a entrega e retirada no local indicado, com pontualidade e cuidado no transporte dos equipamentos.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(46,158,91,0.15); color: var(--verde);">🧼</div>
+          <h3>Limpeza e Manutenção</h3>
+          <p>Serviço de higienização periódica para locações de longa duração, mantendo sempre o padrão de limpeza.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🪣</div>
+          <h3>Limpeza de Fossa</h3>
+          <p>Serviço especializado de limpeza e esvaziamento de fossas residenciais e comerciais com equipamento adequado e atendimento rápido em Catanduva e região.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="galeria-inner">
+      <div class="section-header">
+        <span class="section-badge">Nossos equipamentos</span>
+        <h2>Galeria de <span>Fotos</span></h2>
+        <p>Confira nossos banheiros quimicos prontos para uso</p>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item grande">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Banheiro quimico obra" loading="lazy"/>
+          <div class="galeria-overlay"><span>Para Obras</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="Higienizacao" loading="lazy"/>
+          <div class="galeria-overlay"><span>Higienizacao</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Nossa Frota" loading="lazy"/>
+          <div class="galeria-overlay"><span>Nossa Frota</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Entrega" loading="lazy"/>
+          <div class="galeria-overlay"><span>Entrega no Local</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="Atendimento" loading="lazy"/>
+          <div class="galeria-overlay"><span>Atendimento</span></div>
+        </div>
+      </div>
+      <div class="galeria-cta">
+        <p>Quer solicitar um orcamento?</p>
+        <a href="https://wa.me/5517999999999" class="btn-whatsapp" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Solicitar Orcamento pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ── -->
+  <section class="sobre" id="sobre">
+    <div class="sobre-inner">
+      <div class="sobre-texto">
+        <span class="section-badge">Quem somos</span>
+        <h2>Tradição e <span>Confiança</span><br>em Catanduva</h2>
+        <p>A Lercy Locações é uma empresa especializada em locação de banheiros químicos para obras, eventos e festas em Catanduva e região. Atendemos com agilidade, higiene e responsabilidade.</p>
+        <p>Além da locação de banheiros químicos, também realizamos limpeza de fossa residencial e comercial, oferecendo um serviço completo de saneamento para nossos clientes.</p>
+        <p>Nossa missão é garantir conforto e praticidade com equipamentos sempre limpos, modernos e entregues no prazo combinado.</p>
+      </div>
+      <div class="sobre-diferenciais">
+        <div class="diferencial">
+          <div class="diferencial-icon">✅</div>
+          <div class="diferencial-texto">
+            <strong>Equipamentos higienizados</strong>
+            <span>Todos os banheiros sao entregues completamente limpos e prontos para uso.</span>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">🚚</div>
+          <div class="diferencial-texto">
+            <strong>Entrega rapida</strong>
+            <span>Atendemos Catanduva e toda a regiao com pontualidade e cuidado.</span>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">💬</div>
+          <div class="diferencial-texto">
+            <strong>Atendimento pelo WhatsApp</strong>
+            <span>Orcamento rapido e sem burocracia direto pelo celular.</span>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">📋</div>
+          <div class="diferencial-texto">
+            <strong>Para qualquer necessidade</strong>
+            <span>Obras, eventos, festas, area rural e muito mais.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ── -->
+  <section class="contato" id="contato">
+    <div class="contato-inner">
+      <span class="section-badge">Fale conosco</span>
+      <h2>Solicite seu <span>Orcamento</span></h2>
+      <p>Entre em contato agora mesmo pelo WhatsApp e receba um orcamento rapido e sem compromisso para o seu evento ou obra.</p>
+      <div class="contato-cards">
+        <div class="contato-card">
+          <span>📍</span>
+          <strong>Localizacao</strong>
+          <p>Catanduva, SP</p>
+        </div>
+        <div class="contato-card">
+          <span>🕐</span>
+          <strong>Atendimento</strong>
+          <p>Seg a Sab</p>
+        </div>
+        <div class="contato-card">
+          <span>📧</span>
+          <strong>E-mail</strong>
+          <a href="/cdn-cgi/l/email-protection#d6b5b9b8a2b7a2b996bab3a4b5afbab9b5b7b5b9b3a5f8b5b9bbf8b4a4"><span class="__cf_email__" data-cfemail="b2d1dddcc6d3c6ddf2ded7c0d1cbdeddd1d3d1ddd7c19cd1dddf9cd0c0">[email&#160;protected]</span></a>
+        </div>
+      </div>
+      <a href="https://wa.me/5517999999999" class="btn-whatsapp-grande" target="_blank">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp agora
+      </a>
+    </div>
+  </section>
+
+  <!-- ── RODAPE ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <strong>Lercy Locacoes</strong>
+        <span>Catanduva &bull; SP</span>
+      </div>
+      <nav class="footer-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Servicos</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Lercy Locacoes &mdash; Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTAO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5517999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azul:   #1B4F8A;
+      --azul-escuro: #0f2e52;
+      --verde:  #2E9E5B;
+      --verde-claro: #3dbd6e;
+      --branco: #FFFFFF;
+      --cinza-claro: #f4f7f4;
+      --texto:  #1a1a2e;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--azul-escuro);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--verde);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1.5px;
+      color: var(--branco);
+    }
+
+    .logo-text span {
+      font-size: 11px;
+      color: var(--verde-claro);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.1);
+      color: var(--branco);
+    }
+
+    nav a.cta {
+      background: var(--verde);
+      color: var(--branco);
+      padding: 8px 18px;
+    }
+
+    nav a.cta:hover {
+      background: var(--verde-claro);
+    }
+
+    /* ── HAMBURGER (mobile) ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--branco);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── PLACEHOLDER CONTEÚDO ── */
+    .placeholder {
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      background: var(--cinza-claro);
+      color: #888;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .placeholder span { font-size: 48px; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--azul-escuro);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(46,158,91,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(27,79,138,0.4) 0%, transparent 50%),
+        linear-gradient(135deg, #0f2e52 0%, #1a3f6e 50%, #0f2e52 100%);
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(46,158,91,0.2);
+      border: 1px solid rgba(46,158,91,0.4);
+      color: var(--verde-claro);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      width: fit-content;
+      letter-spacing: 0.5px;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 1;
+      color: var(--branco);
+      letter-spacing: 2px;
+      animation: fadeDown 0.6s 0.1s ease both;
+    }
+
+    .hero h1 span { color: var(--verde-claro); }
+
+    .hero p {
+      font-size: clamp(15px, 2vw, 18px);
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      line-height: 1.7;
+      animation: fadeDown 0.6s 0.2s ease both;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      animation: fadeDown 0.6s 0.3s ease both;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.45);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--verde-claro);
+      background: rgba(46,158,91,0.1);
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      animation: fadeDown 0.6s 0.4s ease both;
+    }
+
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+
+    .stat strong {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--branco);
+      line-height: 1;
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SERVIÇOS ── */
+    .servicos {
+      background: var(--cinza-claro);
+      padding: 100px 24px;
+    }
+
+    .servicos-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: rgba(46,158,91,0.12);
+      border: 1px solid rgba(46,158,91,0.3);
+      color: var(--verde);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .section-header h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 5vw, 56px);
+      color: var(--azul-escuro);
+      letter-spacing: 1.5px;
+      line-height: 1;
+    }
+
+    .section-header h2 span { color: var(--verde); }
+
+    .section-header p {
+      color: #666;
+      font-size: 16px;
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .servico-card {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 32px 28px;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .servico-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    .servico-card.destaque {
+      border: 2px solid var(--verde);
+      box-shadow: 0 4px 20px rgba(46,158,91,0.12);
+    }
+
+    .servico-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .servico-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--azul-escuro);
+      margin-bottom: 10px;
+    }
+
+    .servico-card p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .tag-popular {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--verde);
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .hamburger { display: flex !important; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
+      .galeria-grid { grid-template-columns: 1fr 1fr; }
+      .galeria-item.grande { grid-column: span 2; grid-row: span 1; aspect-ratio: 4/3; }
+
+      nav {
+        display: none !important;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: var(--azul-escuro);
+        flex-direction: column;
+        padding: 16px 24px 24px;
+        gap: 4px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        z-index: 999;
+      }
+
+      nav.open { display: flex !important; }
+      nav a { width: 100%; text-align: center; padding: 12px; }
+    }
+
+    /* ── GALERIA ── */
+    .galeria { background: var(--branco); padding: 90px 24px; }
+    .galeria-inner { max-width: 1100px; margin: 0 auto; }
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .galeria-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+    .galeria-item.grande {
+      grid-column: span 2;
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+    .galeria-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .galeria-item:hover img { transform: scale(1.06); }
+    .galeria-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,46,82,0.75) 0%, transparent 50%);
+      display: flex; align-items: flex-end; padding: 18px;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .galeria-item:hover .galeria-overlay { opacity: 1; }
+    .galeria-overlay span { color: var(--branco); font-weight: 800; font-size: 15px; }
+    .galeria-cta {
+      margin-top: 48px; display: flex; flex-direction: column;
+      align-items: center; gap: 18px; text-align: center;
+    }
+    .galeria-cta p { font-size: 18px; font-weight: 700; color: var(--azul-escuro); }
+
+    /* ── SOBRE ── */
+    .sobre {
+      background: var(--azul-escuro);
+      padding: 90px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .sobre::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(46,158,91,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .sobre-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .sobre-texto .section-badge {
+      background: rgba(46,158,91,0.2);
+      border: 1px solid rgba(46,158,91,0.3);
+      color: var(--verde-claro);
+    }
+    .sobre-texto h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(36px, 5vw, 54px);
+      color: var(--branco);
+      letter-spacing: 1.5px;
+      line-height: 1;
+      margin: 14px 0 20px;
+    }
+    .sobre-texto h2 span { color: var(--verde-claro); }
+    .sobre-texto p {
+      color: rgba(255,255,255,0.7);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .sobre-diferenciais {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .diferencial {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      transition: background 0.2s;
+    }
+    .diferencial:hover { background: rgba(255,255,255,0.08); }
+    .diferencial-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .diferencial-texto strong {
+      display: block;
+      color: var(--branco);
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .diferencial-texto span {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* ── CONTATO ── */
+    .contato {
+      background: var(--cinza-claro);
+      padding: 90px 24px;
+    }
+    .contato-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contato-inner h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(36px, 5vw, 54px);
+      color: var(--azul-escuro);
+      letter-spacing: 1.5px;
+      margin: 14px 0 16px;
+    }
+    .contato-inner h2 span { color: var(--verde); }
+    .contato-inner p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .contato-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .contato-card {
+      background: var(--branco);
+      border-radius: 14px;
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 160px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .contato-card span:first-child { font-size: 28px; }
+    .contato-card strong {
+      font-size: 13px;
+      color: #999;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .contato-card a, .contato-card p {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      text-decoration: none;
+      margin: 0;
+    }
+    .btn-whatsapp-grande {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25D366;
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 18px 40px;
+      border-radius: 14px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+    }
+    .btn-whatsapp-grande:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.5);
+    }
+
+    /* ── RODAPÉ ── */
+    footer {
+      background: #060f1e;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-logo strong {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 22px;
+      color: var(--branco);
+      letter-spacing: 1.5px;
+    }
+    .footer-logo span {
+      font-size: 12px;
+      color: var(--verde-claro);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: block;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--verde-claro); }
+    .footer-copy {
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+    }
+
+    /* ── BOTÃO FLUTUANTE WHATSAPP ── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      background: #25D366;
+      color: var(--branco);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.6);
+    }
+    .whatsapp-float::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: rgba(37,211,102,0.4);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); opacity: 0.7; }
+      70%  { transform: scale(1.5); opacity: 0; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+
+    @media (max-width: 480px) {
+      .galeria-grid { grid-template-columns: 1fr; }
+      .galeria-item.grande { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">🚽</div>
+        <div class="logo-text">
+          <strong>Lercy Locações</strong>
+          <span>Catanduva • SP</span>
+        </div>
+      </a>
+
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato" class="cta">📞 Fale Conosco</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">📍 Catanduva e região</div>
+      <h1>Banheiros Químicos<br><span>& Limpeza de Fossas</span></h1>
+      <p>Aluguel de banheiros químicos para obras, eventos e festas.<br>Também realizamos limpeza de fossa. Higiene e atendimento rápido onde você precisar.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/5517999999999?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." class="btn-whatsapp" target="_blank">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Solicitar Orçamento
+        </a>
+        <a href="#servicos" class="btn-outline">Ver Serviços</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>+500</strong><span>Eventos atendidos</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>24h</strong><span>Atendimento rápido</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Higienizados</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVIÇOS ── -->
+  <section class="servicos" id="servicos">
+    <div class="servicos-inner">
+      <div class="section-header">
+        <span class="section-badge">O que oferecemos</span>
+        <h2>Nossos <span>Serviços</span></h2>
+        <p>Soluções completas em locação de banheiros químicos para cada necessidade</p>
+      </div>
+      <div class="servicos-grid">
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🏗️</div>
+          <h3>Obras e Construção</h3>
+          <p>Banheiros químicos para canteiros de obra, garantindo conforto e higiene aos trabalhadores durante toda a construção.</p>
+        </div>
+
+        <div class="servico-card destaque">
+          <div class="servico-icon" style="background: rgba(46,158,91,0.15); color: var(--verde);">🎉</div>
+          <h3>Eventos e Festas</h3>
+          <p>Ideal para shows, festas, casamentos e eventos ao ar livre. Entrega, retirada e higienização inclusos no serviço.</p>
+          <span class="tag-popular">Mais solicitado</span>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🌾</div>
+          <h3>Área Rural e Agro</h3>
+          <p>Atendemos propriedades rurais, colheitas e atividades do agronegócio onde não há infraestrutura sanitária disponível.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(46,158,91,0.15); color: var(--verde);">♿</div>
+          <h3>Acessível (PCD)</h3>
+          <p>Banheiros adaptados para pessoas com deficiência, seguindo todas as normas de acessibilidade vigentes.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🚛</div>
+          <h3>Entrega e Retirada</h3>
+          <p>Fazemos a entrega e retirada no local indicado, com pontualidade e cuidado no transporte dos equipamentos.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(46,158,91,0.15); color: var(--verde);">🧼</div>
+          <h3>Limpeza e Manutenção</h3>
+          <p>Serviço de higienização periódica para locações de longa duração, mantendo sempre o padrão de limpeza.</p>
+        </div>
+
+        <div class="servico-card">
+          <div class="servico-icon" style="background: rgba(27,79,138,0.12); color: var(--azul);">🪣</div>
+          <h3>Limpeza de Fossa</h3>
+          <p>Serviço especializado de limpeza e esvaziamento de fossas residenciais e comerciais com equipamento adequado e atendimento rápido em Catanduva e região.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <div class="galeria-inner">
+      <div class="section-header">
+        <span class="section-badge">Nossos equipamentos</span>
+        <h2>Galeria de <span>Fotos</span></h2>
+        <p>Confira nossos banheiros quimicos prontos para uso</p>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item grande">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Banheiro quimico obra" loading="lazy"/>
+          <div class="galeria-overlay"><span>Para Obras</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="Higienizacao" loading="lazy"/>
+          <div class="galeria-overlay"><span>Higienizacao</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Nossa Frota" loading="lazy"/>
+          <div class="galeria-overlay"><span>Nossa Frota</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Entrega" loading="lazy"/>
+          <div class="galeria-overlay"><span>Entrega no Local</span></div>
+        </div>
+        <div class="galeria-item">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="Atendimento" loading="lazy"/>
+          <div class="galeria-overlay"><span>Atendimento</span></div>
+        </div>
+      </div>
+      <div class="galeria-cta">
+        <p>Quer solicitar um orcamento?</p>
+        <a href="https://wa.me/5517999999999" class="btn-whatsapp" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Solicitar Orcamento pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ── -->
+  <section class="sobre" id="sobre">
+    <div class="sobre-inner">
+      <div class="sobre-texto">
+        <span class="section-badge">Quem somos</span>
+        <h2>Tradição e <span>Confiança</span><br>em Catanduva</h2>
+        <p>A Lercy Locações é uma empresa especializada em locação de banheiros químicos para obras, eventos e festas em Catanduva e região. Atendemos com agilidade, higiene e responsabilidade.</p>
+        <p>Além da locação de banheiros químicos, também realizamos limpeza de fossa residencial e comercial, oferecendo um serviço completo de saneamento para nossos clientes.</p>
+        <p>Nossa missão é garantir conforto e praticidade com equipamentos sempre limpos, modernos e entregues no prazo combinado.</p>
+      </div>
+      <div class="sobre-diferenciais">
+        <div class="diferencial">
+          <div class="diferencial-icon">✅</div>
+          <div class="diferencial-texto">
+            <strong>Equipamentos higienizados</strong>
+            <span>Todos os banheiros sao entregues completamente limpos e prontos para uso.</span>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">🚚</div>
+          <div class="diferencial-texto">
+            <strong>Entrega rapida</strong>
+            <span>Atendemos Catanduva e toda a regiao com pontualidade e cuidado.</span>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">💬</div>
+          <div class="diferencial-texto">
+            <strong>Atendimento pelo WhatsApp</strong>
+            <span>Orcamento rapido e sem burocracia direto pelo celular.</span>
+          </div>
+        </div>
+        <div class="diferencial">
+          <div class="diferencial-icon">📋</div>
+          <div class="diferencial-texto">
+            <strong>Para qualquer necessidade</strong>
+            <span>Obras, eventos, festas, area rural e muito mais.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ── -->
+  <section class="contato" id="contato">
+    <div class="contato-inner">
+      <span class="section-badge">Fale conosco</span>
+      <h2>Solicite seu <span>Orcamento</span></h2>
+      <p>Entre em contato agora mesmo pelo WhatsApp e receba um orcamento rapido e sem compromisso para o seu evento ou obra.</p>
+      <div class="contato-cards">
+        <div class="contato-card">
+          <span>📍</span>
+          <strong>Localizacao</strong>
+          <p>Catanduva, SP</p>
+        </div>
+        <div class="contato-card">
+          <span>🕐</span>
+          <strong>Atendimento</strong>
+          <p>Seg a Sab</p>
+        </div>
+        <div class="contato-card">
+          <span>📧</span>
+          <strong>E-mail</strong>
+          <a href="/cdn-cgi/l/email-protection#d6b5b9b8a2b7a2b996bab3a4b5afbab9b5b7b5b9b3a5f8b5b9bbf8b4a4"><span class="__cf_email__" data-cfemail="b2d1dddcc6d3c6ddf2ded7c0d1cbdeddd1d3d1ddd7c19cd1dddf9cd0c0">[email&#160;protected]</span></a>
+        </div>
+      </div>
+      <a href="https://wa.me/5517999999999" class="btn-whatsapp-grande" target="_blank">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp agora
+      </a>
+    </div>
+  </section>
+
+  <!-- ── RODAPE ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <strong>Lercy Locacoes</strong>
+        <span>Catanduva &bull; SP</span>
+      </div>
+      <nav class="footer-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Servicos</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Lercy Locacoes &mdash; Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTAO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5517999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
